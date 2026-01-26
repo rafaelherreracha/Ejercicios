@@ -1,0 +1,151 @@
+/* Variables de color */
+:root {
+    --primario: #1A1A1A;  
+    --secundario: #F5F5F5; 
+}
+
+/*General*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-image: url(../img/fondo.jpg);
+}
+
+/*Header*/
+header {
+    background-color: var(--primario);
+    color: var(--secundario);
+    padding: 10px 30px; 
+    
+    display: flex; 
+    
+    justify-content: space-between; 
+    
+    align-items: center; 
+}
+
+/*Nav*/
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin-left: 30px;
+}
+
+nav a {
+    color: var(--secundario);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+nav a:hover {
+     text-decoration: underline;
+     font-size: 20px;
+}
+
+/*Main*/
+main {
+    padding: 50px;
+}
+
+
+section {
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 40px;
+    border-radius: 5px;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+}
+
+#contacto {
+    background-color: #ffffff; 
+    border-radius: 0; 
+    
+    
+    max-width: 500px;
+    margin: 60px auto; 
+    padding: 50px; 
+    
+    
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6); 
+}
+
+#contacto h2 {
+    text-align: center;
+    color: #1A1A1A; 
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-transform: uppercase; 
+    letter-spacing: 2px;
+}
+
+/* EL FORMULARIO (La estructura) */
+#contacto form {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; 
+}
+
+/* LAS ETIQUETAS (Nombres de los campos) */
+#contacto label {
+    font-weight: bold;
+    color: #333;
+    text-align: left; 
+    margin-bottom: -10px; 
+}
+
+/* LOS CAMPOS DE TEXTO (Inputs) */
+#contacto input,
+#contacto textarea {
+    width: 100%;
+    padding: 15px; 
+    border: 2px solid #ccc; 
+    border-radius: 0; 
+    background-color: #f8f8f8; 
+    font-family: inherit; 
+    font-size: 1rem;
+    box-sizing: border-box; 
+    transition: border-color 0.3s;
+}
+
+/* Efecto al hacer clic en escribir */
+#contacto input:focus,
+#contacto textarea:focus {
+    outline: none;
+    border-color: #1A1A1A; 
+    background-color: #fff;
+}
+
+/* EL BOTÓN */
+#contacto button {
+    background-color: #1A1A1A; 
+    color: #fff; 
+    padding: 18px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 0; 
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+
+footer {
+    background-color: #1e1e1e;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer a {
+    
+    text-decoration: none;
+}
