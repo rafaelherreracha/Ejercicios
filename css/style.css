@@ -67,13 +67,9 @@ section {
 #contacto {
     background-color: #ffffff; 
     border-radius: 0; 
-    
-    
     max-width: 500px;
     margin: 60px auto; 
-    padding: 50px; 
-    
-    
+    padding: 50px;    
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6); 
 }
 
@@ -86,14 +82,14 @@ section {
     letter-spacing: 2px;
 }
 
-/* EL FORMULARIO (La estructura) */
+
 #contacto form {
     display: flex;
     flex-direction: column; 
     gap: 20px; 
 }
 
-/* LAS ETIQUETAS (Nombres de los campos) */
+
 #contacto label {
     font-weight: bold;
     color: #333;
@@ -101,7 +97,7 @@ section {
     margin-bottom: -10px; 
 }
 
-/* LOS CAMPOS DE TEXTO (Inputs) */
+
 #contacto input,
 #contacto textarea {
     width: 100%;
@@ -115,15 +111,8 @@ section {
     transition: border-color 0.3s;
 }
 
-/* Efecto al hacer clic en escribir */
-#contacto input:focus,
-#contacto textarea:focus {
-    outline: none;
-    border-color: #1A1A1A; 
-    background-color: #fff;
-}
 
-/* EL BOTÓN */
+
 #contacto button {
     background-color: #1A1A1A; 
     color: #fff; 
@@ -137,7 +126,7 @@ section {
     margin-top: 10px;
 }
 
-
+/*Footer*/
 footer {
     background-color: #1e1e1e;
     color: white;
