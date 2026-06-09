@@ -56,7 +56,8 @@ table {
 */
 
 :root {
-	--primary-color: #3498db;
+	--background-color: #DDD0C8;
+	--primary-color: #323232;
 	--secondary-color: #2ecc71;
 	--font-family: 'Arial', sans-serif;
 }
@@ -64,11 +65,23 @@ table {
 /*
 	Estilos Globales
 */
+
+header, main, footer {
+    max-width: 1500px;  /* Limita el ancho para que no sea infinito en pantallas grandes */
+    margin: 0 auto;    /* La clave para centrar bloques horizontalmente */
+    padding: 20px;
+}
+
 body {
 	font-family: var(--font-family);
-	background-color: #f4f4f4;
+	background-color: var(--background-color);
 	color: #333;
 	line-height: 1.6;
+}
+
+h1{
+	color: var(--primary-color);
+	font-size: 27px;
 }
 
 h2{
@@ -82,92 +95,160 @@ h3{
 }
 
 /*
+	Media Querys
+*/
+
+/* Media Query para pantallas pequeñas (Móviles) */
+@media (max-width: 600px) {
+    /* 1. Hacemos que el header se apile en vertical */
+    header {
+        flex-direction: column;
+        gap: 10px; /* Espacio entre el título y el menú */
+    }
+
+    /* 2. Hacemos que el menú también se apile en vertical */
+    nav ul {
+        flex-direction: column;
+        gap: 5px; /* Menos espacio entre enlaces */
+    }
+
+    /* 3. Aseguramos que el contenido no se desborde */
+    body {
+        overflow-x: hidden; /* Evita que aparezca una barra de desplazamiento horizontal */
+    }
+}
+
+/* Media Query para Tablets (Pantallas medianas) */
+@media (min-width: 601px) and (max-width: 1023px) {
+    
+    /* 1. Ajustar el grid de proyectos a 2 columnas en lugar de 3 o 1 */
+    #Proyectos ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* 2. Reducir ligeramente los márgenes o paddings si es necesario */
+    header, main, footer {
+        padding: 15px;
+    }
+}
+
+/*
 	header
 */
 header{
-	background-color: rgb(1, 230, 1);
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 }
 
 nav ul{
-	background-color: rgb(1, 136, 1);
 	display: flex;
 	gap: 20px;
+	
 }
 
-h1{
-	background-color: rgb(1, 136, 1);
+ul li a{
+	text-decoration: none;
+	color: inherit;
 }
+
+
 
 /*
 	Main
 */
 
-main{
-	background-color: rgb(248, 84, 84);
 
-}
 
 section{
 	padding: 20px;
 	border: 1px solid #ccc;
+	
 }
 
 #sobre-mi{
-	background-color: rgb(175, 60, 60);
+	
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	text-align: center;
+}
+
+#sobre-mi article {
+    padding: 30px;            /* Espacio interno para que el texto no toque los bordes */
+    max-width: 800px;         /* Limita el ancho para que no se vea demasiado largo */
+    margin: 20px auto;        /* Centra el bloque en la página */
 }
 
 #formacion{
-	background-color: rgb(175, 60, 60);
+	
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	text-align: center;
 }
 
 #certificaciones{
-	background-color: rgb(175, 60, 60);
+	
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	text-align: center;
 }
 
 #habilidades{
-	background-color: rgb(175, 60, 60);
+	
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding: 30px;            /* Espacio interno para que el texto no toque los bordes */
+    max-width: 800px;         /* Limita el ancho para que no se vea demasiado largo */
+    margin: 20px auto; 
+	text-align: center;       /* Centra el bloque en la página */
 }
 
-#proyectos{
-	background-color: rgb(175, 60, 60);
+/*
+	Proyectos
+*/
+#Proyectos{
+	
+	text-align: center;
+	padding: 20px;
+}
+
+#Proyectos li {
+  background-color: #f9f9f9; /* Un color de fondo suave */
+  border: 1px solid #e0e0e0; /* Un borde sutil */
+  border-radius: 8px; /* Bordes un poco redondeados */
+  padding: 20px; /* Espacio interior para que el texto respire */
+}
+
+
+#Proyectos li h3 {
+  margin-top: 0;
 }
 
 #Proyectos ul {
   display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin-top: 20px; /* Separación respecto al título */
   
-  /* Esta es la línea mágica de Grid para que sea responsive sin esfuerzo */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  
-  /* Espacio entre cada proyecto */
-  gap: 20px; 
-  
-  /* Limpiamos los estilos por defecto de las listas HTML */
-  list-style: none;
-  padding: 0;
-  margin: 0;
 }
+/*##########################################################################*/
 
 /*
 	Footer
 */
 
 footer{
-	background-color: rgb(104, 104, 253);
 	display: flex;
 	justify-content: space-around;
+}
+
+footer p a{
+	text-decoration: none;
+	color: inherit;
 }
