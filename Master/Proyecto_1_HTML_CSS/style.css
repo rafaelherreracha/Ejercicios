@@ -55,3 +55,119 @@ table {
     Variables CSS
 */
 
+:root {
+	--primary-color: #3498db;
+	--secondary-color: #2ecc71;
+	--font-family: 'Arial', sans-serif;
+}
+
+/*
+	Estilos Globales
+*/
+body {
+	font-family: var(--font-family);
+	background-color: #f4f4f4;
+	color: #333;
+	line-height: 1.6;
+}
+
+h2{
+	color: var(--primary-color);
+	font-size: 24px;
+}
+
+h3{
+	color: var(--secondary-color);
+	font-size: 15px;
+}
+
+/*
+	header
+*/
+header{
+	background-color: rgb(1, 230, 1);
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+nav ul{
+	background-color: rgb(1, 136, 1);
+	display: flex;
+	gap: 20px;
+}
+
+h1{
+	background-color: rgb(1, 136, 1);
+}
+
+/*
+	Main
+*/
+
+main{
+	background-color: rgb(248, 84, 84);
+
+}
+
+section{
+	padding: 20px;
+	border: 1px solid #ccc;
+}
+
+#sobre-mi{
+	background-color: rgb(175, 60, 60);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#formacion{
+	background-color: rgb(175, 60, 60);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#certificaciones{
+	background-color: rgb(175, 60, 60);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#habilidades{
+	background-color: rgb(175, 60, 60);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#proyectos{
+	background-color: rgb(175, 60, 60);
+}
+
+#Proyectos ul {
+  display: grid;
+  
+  /* Esta es la línea mágica de Grid para que sea responsive sin esfuerzo */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  
+  /* Espacio entre cada proyecto */
+  gap: 20px; 
+  
+  /* Limpiamos los estilos por defecto de las listas HTML */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/*
+	Footer
+*/
+
+footer{
+	background-color: rgb(104, 104, 253);
+	display: flex;
+	justify-content: space-around;
+}
