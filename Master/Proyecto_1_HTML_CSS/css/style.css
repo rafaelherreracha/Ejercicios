@@ -92,6 +92,7 @@ body {
 	
 }
 
+
 h1{
 
 	color: var(--primary-color);
@@ -217,7 +218,7 @@ nav a:hover {
 
 section{
 	padding: 20px;
-	border: 1px solid #000000;
+	
 	
 }
 section h2 {
@@ -240,6 +241,9 @@ section h2 {
 	font-family: "Rubik Dirt", arial;
 }
 
+.bloqueo{
+	align-items: flex-end;
+}
 #sobre-mi{
 
 	margin: 20px auto; 
@@ -332,28 +336,10 @@ section h2 {
     margin-top: 20px; /* Separación respecto al título */
   
 }
-/*
-#contacto{
-	margin: 20px auto; 
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-}
 
-#contacto form{
-	display: flex;
-	flex-direction: column;
-	gap: 15px;
-	padding: 20px;            
-	max-width: 400px;         
-	margin: 20px auto;        
-}
-*/
-/* Contenedor principal de la sección */
 #contacto {
     max-width: 500px;
-    margin: 2rem auto;
+    margin: 5rem auto;
     padding: 2rem;
     background-color: #f9f9f9;
     border-radius: 8px;
