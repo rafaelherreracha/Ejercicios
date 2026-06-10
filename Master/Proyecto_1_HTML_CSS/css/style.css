@@ -58,14 +58,10 @@ table {
 :root {
 	--background-color: #DDD0C8;
 	--primary-color: #323232;
-	--secondary-color: #2ecc71;
+	--secondary-color: #1C4532;
+	--third-color: #5c977c;
 	
 }
-
-/*
-	Fuentes
-*/
-
 
 
 /*
@@ -75,7 +71,6 @@ table {
 
 h1,h2,h3{
 	font-family: "Frijole", system-ui;
-	/*font-family: "Rubik Dirt", system-ui;*/
 	font-weight: normal;
 }
 header, main, footer {
@@ -87,7 +82,7 @@ header, main, footer {
 body {
 	
 	background-color: var(--background-color);
-	color: #333;
+	color: var(--primary-color);
 	line-height: 1.6;
 	
 }
@@ -96,6 +91,7 @@ body {
 h1{
 
 	color: var(--primary-color);
+
 	font-size: 27px;
 }
 
@@ -118,22 +114,22 @@ strong{
 	Media Querys
 */
 
-/* Media Query para pantallas pequeñas (Móviles) */
+/* Media Query para Moviles */
 @media (max-width: 600px) {
-    /* 1. Hacemos que el header se apile en vertical */
+    
     header {
         flex-direction: column;
         gap: 10px; /* Espacio entre el título y el menú */
 		text-align: center; /* Centra el texto en el header */
     }
 
-    /* 2. Hacemos que el menú también se apile en vertical */
+    
     nav ul {
         flex-direction: column;
         gap: 5px; /* Menos espacio entre enlaces */
     }
 
-    /* 3. Aseguramos que el contenido no se desborde */
+    
     body {
         overflow-x: hidden; /* Evita que aparezca una barra de desplazamiento horizontal */
     }
@@ -151,10 +147,10 @@ strong{
 		height: 300px;
 	}
 }
-/**/
 
 
-/* Media Query para Tablets (Pantallas medianas) */
+
+/* Media Query para Tablets */
 @media (min-width: 601px) and (max-width: 1023px) {
     
     /* 1. Ajustar el grid de proyectos a 2 columnas en lugar de 3 o 1 */
@@ -180,9 +176,11 @@ strong{
 	header
 */
 header{
+
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	border-bottom: 3px solid #000000;
 }
 
 nav ul{
@@ -197,7 +195,7 @@ ul li a{
 }
 
 nav a {
-    color: var(--secundario);
+
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease, transform 0.3s ease; /* Transición suave */
@@ -205,16 +203,20 @@ nav a {
 }
 
 nav a:hover {
-    color: #5c977c; /* Un blanco más puro */
-    transform: translateY(-3px); /* El texto "flota" un poco hacia arriba */
+    color: var(--third-color); 
+    transform: translateY(-3px); 
 	
 }
+
+/*#############################################################################*/
 
 /*
 	Main
 */
 
-
+/*
+	Sections
+*/
 
 section{
 	padding: 20px;
@@ -259,9 +261,9 @@ section h2 {
 }
 
 #sobre-mi article {
-    padding: 30px;            /* Espacio interno para que el texto no toque los bordes */
-    max-width: 800px;         /* Limita el ancho para que no se vea demasiado largo */
-    margin: 20px auto;        /* Centra el bloque en la página */
+    padding: 30px;           
+    max-width: 800px;         
+    margin: 20px auto;        
 }
 
 #formacion{
@@ -275,7 +277,11 @@ section h2 {
 }
 
 #formacion li h3{
-	color: #1C4532;
+	color: var(--third-color);
+}
+
+#formacion li p{
+	margin-bottom: 20px;
 }
 
 #certificaciones{
@@ -292,14 +298,14 @@ section h2 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 30px;            /* Espacio interno para que el texto no toque los bordes */
-    max-width: 800px;         /* Limita el ancho para que no se vea demasiado largo */
+	padding: 30px;            
+    max-width: 800px;         
     margin: 20px auto; 
-	text-align: center;       /* Centra el bloque en la página */
+	text-align: center;       
 }
 
 #habilidades h3{
-	color: #1C4532;
+	color: var(--third-color);
 	padding-bottom: 15px;
 }
 
@@ -316,15 +322,16 @@ section h2 {
 }
 
 #Proyectos li {
-  background-color: #f9f9f9; /* Un color de fondo suave */
-  border: 1px solid #e0e0e0; /* Un borde sutil */
-  border-radius: 8px; /* Bordes un poco redondeados */
-  padding: 20px; /* Espacio interior para que el texto respire */
+  background-color: #f9f9f9; 
+  border: 1px solid #e0e0e0; 
+  border-radius: 8px; 
+  padding: 20px; 
 }
 
 
 #Proyectos li h3 {
   margin-top: 0;
+  color: var(--third-color);
 }
 
 #Proyectos ul {
@@ -333,10 +340,13 @@ section h2 {
     gap: 20px;
     list-style: none;
     padding: 0;
-    margin-top: 20px; /* Separación respecto al título */
+    margin-top: 20px; 
   
 }
 
+/*
+	Formularios
+*/
 #contacto {
     max-width: 500px;
     margin: 5rem auto;
@@ -349,25 +359,24 @@ section h2 {
 
 #contacto h2 {
     text-align: center;
-    color: #333;
+    color: var(--secondary-color);
     margin-bottom: 1.5rem;
 }
 
-/* Estilo para los formularios */
+
 form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-/* Etiquetas */
 label {
     font-weight: bold;
     color: #555;
     margin-bottom: 0.25rem;
 }
 
-/* Campos de entrada y textarea */
+
 input, textarea {
     padding: 0.8rem;
     border: 1px solid #ccc;
@@ -376,14 +385,14 @@ input, textarea {
     transition: border-color 0.3s ease;
 }
 
-/* Efecto al hacer clic en los campos */
+
 input:focus, textarea:focus {
     outline: none;
-    border-color: #1C4532;
+    border-color: var(--third-color);
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
 }
 
-/* Botón de envío */
+
 button {
     padding: 0.8rem;
     background-color: #1C4532;
@@ -396,7 +405,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: var(--third-color);
 }
 /*##########################################################################*/
 
@@ -405,8 +414,12 @@ button:hover {
 */
 
 footer{
+	
+	color: var(--primary-color);
 	display: flex;
 	justify-content: space-around;
+	border-top: 3px solid #000000;
+	
 }
 
 footer p a{
