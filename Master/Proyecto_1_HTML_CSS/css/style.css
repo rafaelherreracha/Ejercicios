@@ -1,0 +1,429 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/*
+    CSS Reset 
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+    Variables CSS
+*/
+
+:root {
+	--background-color: #DDD0C8;
+	--primary-color: #323232;
+	--secondary-color: #2ecc71;
+	
+}
+
+/*
+	Fuentes
+*/
+
+
+
+/*
+	Estilos Globales
+*/
+
+
+h1,h2,h3{
+	font-family: "Frijole", system-ui;
+	/*font-family: "Rubik Dirt", system-ui;*/
+	font-weight: normal;
+}
+header, main, footer {
+    max-width: 2000px;  /* Limita el ancho para que no sea infinito en pantallas grandes */
+    margin: 0 auto;    /* La clave para centrar bloques horizontalmente */
+    padding: 20px;
+}
+
+body {
+	
+	background-color: var(--background-color);
+	color: #333;
+	line-height: 1.6;
+	
+}
+
+h1{
+
+	color: var(--primary-color);
+	font-size: 27px;
+}
+
+h2{
+	color: var(--primary-color);
+	font-size: 24px;
+}
+
+h3{
+	color: var(--secondary-color);
+	font-size: 15px;
+}
+
+strong{
+	font-family: "Frijole", system-ui;
+	color: black;
+}
+
+/*
+	Media Querys
+*/
+
+/* Media Query para pantallas pequeñas (Móviles) */
+@media (max-width: 600px) {
+    /* 1. Hacemos que el header se apile en vertical */
+    header {
+        flex-direction: column;
+        gap: 10px; /* Espacio entre el título y el menú */
+		text-align: center; /* Centra el texto en el header */
+    }
+
+    /* 2. Hacemos que el menú también se apile en vertical */
+    nav ul {
+        flex-direction: column;
+        gap: 5px; /* Menos espacio entre enlaces */
+    }
+
+    /* 3. Aseguramos que el contenido no se desborde */
+    body {
+        overflow-x: hidden; /* Evita que aparezca una barra de desplazamiento horizontal */
+    }
+
+	#hero-page{
+		display: flex;
+		flex-direction: column;	
+		align-items: center;
+		text-align: center;
+		margin: 20px 20px 20px 20px; /* Reduce el margen para pantallas pequeñas */	
+	}
+
+	#hero-page img{
+		width: 300px;
+		height: 300px;
+	}
+}
+/**/
+
+
+/* Media Query para Tablets (Pantallas medianas) */
+@media (min-width: 601px) and (max-width: 1023px) {
+    
+    /* 1. Ajustar el grid de proyectos a 2 columnas en lugar de 3 o 1 */
+    #Proyectos ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* 2. Reducir ligeramente los márgenes o paddings si es necesario */
+    header, main, footer {
+        padding: 15px;
+    }
+
+	#hero-page{
+		display: flex;
+		flex-direction: column;
+	}
+	#hero-page p{
+		margin-left: 20px;
+	}
+}
+
+/*
+	header
+*/
+header{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+nav ul{
+	display: flex;
+	gap: 20px;
+	
+}
+
+ul li a{
+	text-decoration: none;
+	color: inherit;
+}
+
+nav a {
+    color: var(--secundario);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease; /* Transición suave */
+	font-family: "Frijole", system-ui;
+}
+
+nav a:hover {
+    color: #5c977c; /* Un blanco más puro */
+    transform: translateY(-3px); /* El texto "flota" un poco hacia arriba */
+	
+}
+
+/*
+	Main
+*/
+
+
+
+section{
+	padding: 20px;
+	border: 1px solid #000000;
+	
+}
+section h2 {
+	padding: 20px;
+}
+
+#hero-page{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px;            /* Espacio interno para que el texto no toque los bordes */
+    max-width: 2000px;         /* Limita el ancho para que no se vea demasiado largo */
+    margin: 20px 200px;  
+}
+#hero-page h2{
+	font-size: 40px;
+}
+
+#hero-page p{
+	font-family: "Rubik Dirt", arial;
+}
+
+#sobre-mi{
+
+	margin: 20px auto; 
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+#sobre-mi strong{
+	font-family: "Frijole", system-ui;
+	color: black;
+}
+
+#sobre-mi article {
+    padding: 30px;            /* Espacio interno para que el texto no toque los bordes */
+    max-width: 800px;         /* Limita el ancho para que no se vea demasiado largo */
+    margin: 20px auto;        /* Centra el bloque en la página */
+}
+
+#formacion{
+	
+	margin: 20px auto; 
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	
+}
+
+#formacion li h3{
+	color: #1C4532;
+}
+
+#certificaciones{
+	
+	margin: 20px auto; 
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+#habilidades{
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 30px;            /* Espacio interno para que el texto no toque los bordes */
+    max-width: 800px;         /* Limita el ancho para que no se vea demasiado largo */
+    margin: 20px auto; 
+	text-align: center;       /* Centra el bloque en la página */
+}
+
+#habilidades h3{
+	color: #1C4532;
+	padding-bottom: 15px;
+}
+
+#habilidades p{
+	padding-bottom: 20px;
+}
+/*
+	Proyectos
+*/
+#Proyectos{
+	
+	text-align: center;
+	padding: 20px;
+}
+
+#Proyectos li {
+  background-color: #f9f9f9; /* Un color de fondo suave */
+  border: 1px solid #e0e0e0; /* Un borde sutil */
+  border-radius: 8px; /* Bordes un poco redondeados */
+  padding: 20px; /* Espacio interior para que el texto respire */
+}
+
+
+#Proyectos li h3 {
+  margin-top: 0;
+}
+
+#Proyectos ul {
+  display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin-top: 20px; /* Separación respecto al título */
+  
+}
+/*
+#contacto{
+	margin: 20px auto; 
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+#contacto form{
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	padding: 20px;            
+	max-width: 400px;         
+	margin: 20px auto;        
+}
+*/
+/* Contenedor principal de la sección */
+#contacto {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+#contacto h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilo para los formularios */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Etiquetas */
+label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 0.25rem;
+}
+
+/* Campos de entrada y textarea */
+input, textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+/* Efecto al hacer clic en los campos */
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #1C4532;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+/* Botón de envío */
+button {
+    padding: 0.8rem;
+    background-color: #1C4532;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+/*##########################################################################*/
+
+/*
+	Footer
+*/
+
+footer{
+	display: flex;
+	justify-content: space-around;
+}
+
+footer p a{
+	text-decoration: none;
+	color: inherit;
+}
