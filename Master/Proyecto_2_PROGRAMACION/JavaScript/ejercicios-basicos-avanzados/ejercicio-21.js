@@ -11,3 +11,20 @@ const users = [
 { name: "Khamala", years: 16 },
 ];
 */
+
+const users = [
+{ name: "Tony", years: 43 },
+{ name: "Peter", years: 18 },
+{ name: "Natasha", years: 14 },
+{ name: "Bruce", years: 32 },
+{ name: "Khamala", years: 16 },
+];
+
+for(const key of users){
+    
+    if(key.years < 18 ){
+        console.log(`El usuario ${key.name} es menor de edad`)
+    } else if(key.years >= 18) {
+        console.log(`El usuario ${key.name} es mayor de edad`)
+    }
+}

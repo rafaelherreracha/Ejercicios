@@ -15,3 +15,26 @@ const toys = [
 {id: 71, name: 'Sylvanian Families - Familia gato'}
 ];
 */
+
+const toys = [
+{id: 5, name: 'Transformers'},
+{id: 11, name: 'LEGO'},
+{id: 23, name: 'Hot Wheels'},
+{id: 40, name: 'Rascador de gato'},
+{id: 40, name: 'FurReal Friends gato interactivo'},
+{id: 60, name: 'Nerf Blaster'},
+{id: 71, name: 'Sylvanian Families - Familia gato'}
+];
+
+for(let i = toys.length -1 ; i >= 0 ; i--){
+    console.log(toys[i])
+    palabras = toys[i].name
+    if(palabras.includes("gato")){
+        console.log("habemus gato")
+        toys.splice(i,1)
+    }else{
+        console.log("No habemus gato")
+    }
+}
+
+console.log(toys)

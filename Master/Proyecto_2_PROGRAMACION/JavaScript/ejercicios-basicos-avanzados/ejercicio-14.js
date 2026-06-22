@@ -28,7 +28,7 @@ function repeatCounter(list) {
   for (let i = 0; i < list.length; i++) {
     const palabra = list[i];
 
-    
+      
     if (contador[palabra]) {
       
       contador[palabra] = contador[palabra] + 1;
