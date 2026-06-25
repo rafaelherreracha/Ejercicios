@@ -73,10 +73,12 @@ const paises = [
 	{title: 'Random title5', imgUrl: 'https://picsum.photos/300/200?random=5'}
 ];
 
-const nuevoDiv4 = document.createElement("div")
+
 
 for(const key of paises){
 	
+	const nuevoDiv4 = document.createElement("div")
+	nuevoDiv4.className = "div-pais";
 
 	const nuevoTituloH4 = document.createElement("h4")
 	nuevoTituloH4.textContent = key.title
@@ -87,19 +89,37 @@ for(const key of paises){
 	nuevoDiv4.appendChild(nuevoTituloH4)
 	nuevoDiv4.appendChild(nuevoImagen)
 
+	document.body.appendChild(nuevoDiv4)
+
+	const nuevoBotonParaDiv = document.createElement("button")
+
 	
 }
 
-document.body.appendChild(nuevoDiv4)
 
 
 
-//1-5
+//1-5 Basandote en el ejercicio anterior. Crea un botón que elimine el último elemento de la serie de divs.
+const nuevoBoton = document.createElement("button")
+nuevoBoton.textContent = "Eliminar"
+
+document.body.appendChild(nuevoBoton)
+
+
+nuevoBoton.addEventListener("click", () =>{
+	const todosLosDiv = document.querySelectorAll(".div-pais")
+	if (todosLosDiv.length > 0) {
+        todosLosDiv[todosLosDiv.length - 1].remove();
+    }
+
+})
 
 
 
 
-//
+
+//1.6 Basandote en el ejercicio anterior. Crea un botón para cada uno de los divs que elimine ese mismo elemento del html.
+
 
 
 //
