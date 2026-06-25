@@ -1,0 +1,119 @@
+/* Estilos Generales y Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header / Navegación */
+header {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 2px solid #cf1111;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #cf1111;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+header nav a {
+    color: #b3b3b3;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+header nav a:hover, header nav a.active {
+    color: #fff;
+    border-bottom: 2px solid #cf1111;
+    padding-bottom: 4px;
+}
+
+/* Cuerpo Principal */
+main {
+    flex: 1;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.hero p {
+    color: #888;
+}
+
+.albums-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #cf1111;
+    border-bottom: 1px solid #2a2a2a;
+    padding-bottom: 10px;
+}
+
+/* Estilos de la Lista Dinámica */
+.albums-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.album-item {
+    background-color: #1e1e1e;
+    padding: 15px 20px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    border-left: 4px solid #444;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efecto hover interactivo al pasar el ratón por encima de los LI */
+.album-item:hover {
+    background-color: #252525;
+    border-left-color: #cf1111;
+    transform: translateX(5px);
+}
+
+.album-icon {
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 40px;
+}

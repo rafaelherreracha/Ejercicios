@@ -89,9 +89,19 @@ for(const key of paises){
 	nuevoDiv4.appendChild(nuevoTituloH4)
 	nuevoDiv4.appendChild(nuevoImagen)
 
-	document.body.appendChild(nuevoDiv4)
+	
 
 	const nuevoBotonParaDiv = document.createElement("button")
+	nuevoBotonParaDiv.textContent = "EliminarDiv"
+
+	nuevoDiv4.appendChild(nuevoBotonParaDiv)
+
+	nuevoBotonParaDiv.addEventListener("click", () =>{
+		nuevoDiv4.remove();
+
+	})
+
+	document.body.appendChild(nuevoDiv4)
 
 	
 }
