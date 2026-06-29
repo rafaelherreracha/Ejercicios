@@ -61,10 +61,10 @@ const animalFunction = () => {
 };
 
 // Destructuring directo de la ejecución de la función
-const { name, race } = animalFunction();
+const { nombre, race } = animalFunction();
 
 // Impresión en consola
-console.log(name); // 'Bengal Tiger'
+console.log(nombre); // 'Bengal Tiger'
 console.log(race); // 'Tiger'
 
 // 1-4
