@@ -18,10 +18,8 @@ Tened en cuenta que esta URL se refiere al pokemon número 1, que es bulbasaur, 
 
 const idAleatorio = Math.floor(Math.random() * 151) + 1;
 
-// 2. Creamos la URL usando Template Literals (las comillas invertidas `) para meter el ID
 const URL_API = `https://pokeapi.co/api/v2/pokemon/${idAleatorio}`;
 
-// 3. Seleccionamos la etiqueta de la imagen del HTML
 const imgPokemon = document.querySelector(".random-image");
 
 async function conseguirPokemonAleatorio() {
